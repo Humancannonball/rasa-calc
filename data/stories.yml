@@ -4,6 +4,7 @@ stories:
 - story: calculate story
   steps:
   - intent: greet
+  - action: greet
   - action: utter_chitchat
   - intent: chitchat
   - action: utter_chitchat
