@@ -1,0 +1,59 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - calculate_request
+  - chitchat
+  - bot_challenge
+
+#influence_converstation so the numbers/operations provided
+#are not used in future predictions
+entities:
+  - operator
+  - first_number
+  - second_number
+
+slots:
+  first_number:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: first_number
+
+  second_number:
+    type: float
+    mappings:
+    - type: from_entity
+      entity: second_number
+
+  operator:
+    type: categorical
+    values:
+      - multiply
+      - divide
+      - subtract
+      - add
+    mappings:
+    - type: from_entity
+      entity: operator
+
+actions:
+  - action_calculate
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_chitchat:
+  - text: "I'm here to help you with calculations. You can ask me to perform addition, subtraction, multiplication, or division. For example, you can say 'What is 5 plus 3?' or 'Calculate 7 times 8.'"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

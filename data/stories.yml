@@ -1,0 +1,11 @@
+version: "3.1"
+
+stories:
+- story: calculate story
+  steps:
+  - intent: greet
+  - action: utter_chitchat
+  - intent: chitchat
+  - action: utter_chitchat
+  - intent: calculate_request
+  - action: action_calculate

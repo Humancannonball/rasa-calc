@@ -1,0 +1,92 @@
+version: "3.1"
+
+
+nlu:
+# - synonym: add
+#   examples: |
+#     - plus
+#     - addition
+#     - increase
+#     - sum
+#     - +
+
+# - synonym: subtract
+#   examples: |
+#     - minus
+#     - less
+#     - decrease
+#     - deduction
+#     - -
+
+# - synonym: multiply
+#   examples: |
+#     - times
+#     - multiplication
+#     - product
+#     - *
+
+# - synonym: divide
+#   examples: |
+#     - over
+#     - division
+#     - quotient
+#     - /
+
+- intent: calculate_request
+  examples: |
+    - I want to [multiply](operator) [5](first_number) and [3.9](second_number)
+    - Can you [divide](operator) [7.1](first_number) by [2](second_number)?
+    - Let's [subtract](operator) [2.5](second_number) from [10](first_number)
+    - I want to [add](operator) [20](first_number) and [4](second_number)
+    - Please [add](operator) [15](first_number) to [7](second_number)
+    - Can you [subtract](operator) [3](second_number) from [9](first_number)?
+    - I need to [multiply](operator) [6](first_number) by [3](second_number)
+    - Can you [divide](operator) [18](first_number) by [6](second_number)?
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: chitchat
+  examples: |
+    - How's the weather?
+    - Tell me a joke.
+    - What's your favorite color?
+    - How are you doing?
+    - What's your name?
+    - Where are you from?
+    - Can you help me?
+    - I'm bored.
+    - Tell me something interesting.
+    - What can you do?
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
